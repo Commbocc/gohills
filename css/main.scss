@@ -118,6 +118,17 @@ body {
 	@include alert-variant($alert-primary-bg, $alert-primary-border, $alert-primary-text);
 }
 
+.alert-full-width {
+
+	padding: 45px 0 55px;
+	// margin-bottom: 0;
+
+	.page-header {
+		margin-top: 0;
+	}
+
+}
+
 .embed-responsive {
 	margin: 10px 0 20px;
 }
@@ -160,8 +171,9 @@ body {
 }
 
 
-section.extra-padding {
-	padding: 50px inital;
+.extra-padding {
+	// padding: 50px inital;
+	margin: 60px auto 40px;
 }
 
 .reality-check-carousel {
