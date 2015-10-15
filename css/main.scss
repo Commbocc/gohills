@@ -176,23 +176,20 @@ body {
 	margin: 60px auto 40px;
 }
 
-// .reality-check-carousel {
-// 	margin-top: 20px;
+.reality-check-carousel {
+	margin: 20px auto 10px;
+	width: 90%;
 
-// 	.carousel-control {
-// 		width: 50px;
-// 		color: #fff;
-// 		text-shadow: none;
+	.carousel-control {
+		width: 50px;
 
-// 		&.right, &.left { background-image: none; }
-// 		&.right { right: -50px; }
-// 		&.left { left: -50px; }
-// 	}
+		&.right, &.left { background-image: none; }
+		&.right { right: -40px; }
+		&.left { left: -40px; }
+	}
 
-// 	.carousel-indicators {
-// 		bottom: -30px;
-// 		margin-bottom: 0px;
-// 		li { border: 1px solid #fff; }
-// 		.active { background: #fff; }
-// 	}
-// }
+	.carousel-indicators {
+		bottom: -30px;
+		margin-bottom: 0px;
+	}
+}
