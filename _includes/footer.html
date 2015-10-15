@@ -4,51 +4,45 @@
 
 		<hr>
 
-		<ul class="list-inline text-center">
-			<ul class="list-inline text-center">
-
-				<li>
-					<a href="{{ site.baseurl }}/#" class="to-top">Top</a>
-				</li>
-
-				{% for link in site.data.menu_nav %}
-				{% if link.title %}
-				<li class="{% if link.href == page.url %}active{% endif %}">
-					<a href="{{ link.href | prepend: site.baseurl }}" class="{{ link.class }}">{{ link.title }}</a>
-				</li>
-				{% endif %}
-				{% endfor %}
-
-				<li>
-					<a href="#">
-						<i class="fa fa-facebook"></i>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<i class="fa fa-twitter"></i>
-					</a>
-				</li>
-
-			</ul>
-
-			<p>
-				<div class="text-center small">
-					&copy; 2005-<span id="copyYear">2015</span>
+		<div class="row text-center">
+			<div class="col-sm-3">
+				<a href="http://facebook.com/GoHillsborough" target="_blank">
+					<i class="fa fa-facebook-square fa-3x"></i>
+				</a>
+				<a href="http://twitter.com/gohillsborough" target="_blank">
+					<i class="fa fa-twitter-square fa-3x"></i>
+				</a>
+				<a href="https://www.youtube.com/channel/UCNtQyG5d5BQ7RZwKRIc6g4w" target="_blank">
+					<i class="fa fa-youtube-square fa-3x"></i>
+				</a>
+			</div>
+			<div class="col-sm-3">
+				<p>
+					Comment Line<br>
+					813-274-6922
+				</p>
+			</div>
+			<div class="col-sm-6">
+				<p>
+					&copy; <span id="copyYear">2015</span>
 					<a href="http://hillsboroughcounty.org/" target="_blank">
 						Hillsborough County
 					</a>
-
-				</div>
-			</p>
-
+					|
+					<a href="{{site.baseurl}}/rules-of-engagement">
+						Rules of Engagement
+					</a>
+				</p>
+			</div>
 		</div>
 
-	</footer>
+	</div>
 
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="{{ site.baseurl }}/js/bootstrap-3.3.5.min.js"></script>
-	<script src="{{ site.baseurl }}/js/theme.js"></script>
-	<script src="{{ site.baseurl }}/js/bslightbox.js"></script>
+</footer>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="{{ site.baseurl }}/js/bootstrap-3.3.5.min.js"></script>
+<script src="{{ site.baseurl }}/js/theme.js"></script>
+<script src="{{ site.baseurl }}/js/bslightbox.js"></script>
