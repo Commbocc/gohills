@@ -184,8 +184,8 @@ body {
 		width: 50px;
 
 		&.right, &.left { background-image: none; }
-		&.right { right: -40px; }
-		&.left { left: -40px; }
+		&.right { right: -30px; top: 40%; }
+		&.left { left: -30px; top: 40%; }
 	}
 
 	.carousel-indicators {
