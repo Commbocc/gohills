@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+{% if page.image %}
+<img src="{{ site.baseurl }}/images/{{page.image}}" class="img-responsive center-block">
+{% endif %}
+
+{% if page.title %}
+<header class="page-header page-header-warning">
+	<h1 class="text-center">{{ page.title }}</h1>
+</header>
+{% endif %}
+
+<article class="post-content">
+	{{ content }}
+</article>
+
+{% if page.workshop %}
+<p class="text-center">
+	<a href="{{site.baseurl}}/meetings" class="btn btn-outlined btn-primary btn-lg">
+		RSVP For A Workshop
+	</a>
+</p>
+{% endif %}

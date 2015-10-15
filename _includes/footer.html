@@ -1,0 +1,54 @@
+<footer id="page-footer">
+
+	<div class="container">
+
+		<hr>
+
+		<ul class="list-inline text-center">
+			<ul class="list-inline text-center">
+
+				<li>
+					<a href="{{ site.baseurl }}/#" class="to-top">Top</a>
+				</li>
+
+				{% for link in site.data.menu_nav %}
+				{% if link.title %}
+				<li class="{% if link.href == page.url %}active{% endif %}">
+					<a href="{{ link.href | prepend: site.baseurl }}" class="{{ link.class }}">{{ link.title }}</a>
+				</li>
+				{% endif %}
+				{% endfor %}
+
+				<li>
+					<a href="#">
+						<i class="fa fa-facebook"></i>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<i class="fa fa-twitter"></i>
+					</a>
+				</li>
+
+			</ul>
+
+			<p>
+				<div class="text-center small">
+					&copy; 2005-<span id="copyYear">2015</span>
+					<a href="http://hillsboroughcounty.org/" target="_blank">
+						Hillsborough County
+					</a>
+
+				</div>
+			</p>
+
+		</div>
+
+	</footer>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="{{ site.baseurl }}/js/bootstrap-3.3.5.min.js"></script>
+	<script src="{{ site.baseurl }}/js/theme.js"></script>
+	<script src="{{ site.baseurl }}/js/bslightbox.js"></script>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+	{% include nav.html %}
+
+	<div class="jumbotron" id="jumbo-main">
+		<div class="container">
+			<h1 class="text-center">
+				Make Your Voice Heard.
+			</h1>
+			<p class="text-center">
+				<a href="#" class="btn btn-outlined btn-info btn-lg">Get Involved</a>
+			</p>
+		</div>
+	</div>
+
+	<div class="container" style="margin-top: 50px;">
+
+		<div class="row">
+			<div class="col-sm-8">
+				{{ content }}
+			</div>
+			<div class="col-sm-4">
+
+				<div class="panel panel-info">
+					<header class="panel-heading">
+						<h4 class="panel-title">Recent News</h4>
+					</header>
+					<div class="list-group">
+						<a href="#" class="list-group-item">
+							<h4 class="list-group-item-heading">
+								‘Go Hillsborough’ supporters promised to listen, and they have
+								<small>Tampa Tribune</small>
+							</h4>
+							<p class="list-group-item-text">
+								Coaxing people to willingly pay higher taxes is always a tough sell, but it can be done if the need is legitimate and the public feels like propone...
+							</p>
+						</a>
+						<a href="#" class="list-group-item">
+							<h4 class="list-group-item-heading">
+								Sierra Club says it has NOT taken a position on proposed transportation tax
+								<small>SaintPetersBlog</small>
+							</h4>
+							<p class="list-group-item-text">
+								Earlier this month this news organization reported in a headline that the Tampa Bay Sierra Club opposed the proposed half-cent transportation tax t...
+							</p>
+						</a>
+					</div>
+				</div>
+
+
+				<div class="panel panel-info">
+					<header class="panel-heading">
+						<h4 class="panel-title">Meetings</h4>
+					</header>
+					<div class="list-group">
+						<a href="#" class="list-group-item">Sept. 22 - West/Central Tampa</a>
+						<a href="#" class="list-group-item">Sept. 22 - Brandon</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+	{% include footer.html %}
+	
+</body>
+</html>

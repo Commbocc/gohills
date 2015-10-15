@@ -1,0 +1,186 @@
+---
+---
+
+@charset "utf-8";
+
+@import "bootswatch/yeti/variables";
+@import "bootstrap";
+@import "bootswatch/yeti/bootswatch";
+
+// @import url(https://fonts.googleapis.com/css?family=Work+Sans:300);
+
+body {
+	margin-top: 10px;
+
+	@media (min-width: $screen-sm-min) {
+		margin-top: 20px;
+	}
+}
+
+#nav-secondary {
+
+	display: flex;
+	justify-content: center;
+
+	margin-bottom: 10px;
+
+	@media (min-width: $screen-md-min) {
+		float: right;
+	}
+}
+
+#nav-responsive {
+	margin-bottom: 0;
+}
+
+#nav-main {
+
+	margin: 10px 0 20px;
+
+	li {
+		border-left: solid 2px $brand-warning;
+	}
+
+	li > a {
+		color: $brand-primary;
+		text-align: left;
+		line-height: 1.2;
+		font-weight: bold;
+
+		&:hover {
+			color: $brand-info;
+			background-color: #fff;
+		}
+
+	}
+
+}
+
+#jumbo-main {
+	background-image: url('http://commbocc.github.io/tedtimeline/images/bus-blue-overlay.jpg');
+	background-repeat: no-repeat;
+	background-position: center -281px;
+	// background-attachment: fixed;
+	background-size: cover;
+
+	color: #fff;
+}
+
+// .btn-outlined {
+// 	padding: 3px;
+// 	background-clip: content-box;
+// }
+
+
+.btn-outlined {
+	position:relative;
+
+	&.btn-default:before { border: 1px solid #e7e7e7; }
+	&.btn-primary:before { border: 1px solid $brand-primary; }
+	&.btn-warning:before { border: 1px solid $brand-warning; }
+	&.btn-info:before { border: 1px solid $brand-info; }
+
+	&:before {
+		content: " ";
+		position: absolute;
+		top: -5px;
+		left: -5px;
+		right: -5px;
+		bottom: -5px;
+		// z-index: 0;
+	}
+}
+
+
+.page-header {
+
+	&.page-header-primary {
+		border-top: solid 2px $brand-primary;
+		border-bottom: solid 2px $brand-primary;
+		color: $brand-primary;
+	}
+
+	&.page-header-warning {
+		border-top: solid 2px $brand-warning;
+		border-bottom: solid 2px $brand-warning;
+		color: $brand-warning;
+	}
+
+	&.page-header-white {
+		border-top: solid 2px #fff;
+		border-bottom: solid 2px #fff;
+		color: #fff;
+	}
+
+}
+
+.alert-primary {
+	@include alert-variant($alert-primary-bg, $alert-primary-border, $alert-primary-text);
+}
+
+.embed-responsive {
+	margin: 10px 0 20px;
+}
+
+@media (min-width: $screen-sm-min) {
+	.columns-2 {
+		-webkit-column-count: 2; /* Chrome, Safari, Opera */
+		-moz-column-count: 2; /* Firefox */
+		column-count: 2;
+	}
+
+	.columns-3 {
+		-webkit-column-count: 3; /* Chrome, Safari, Opera */
+		-moz-column-count: 3; /* Firefox */
+		column-count: 3;
+	}
+}
+
+// five (5) column support
+.col-xs-20, .col-sm-20, .col-md-20, .col-lg-20 {
+	position: relative;
+	min-height: 1px;
+	padding: 0 10px;
+	width: 20%;
+	float: left;
+}
+@media (max-width: 767px) { .col-sm-20 { width: 100%; } }
+@media (max-width: 991px) { .col-md-20 { width: 100%; } }
+@media (max-width: 1199px) { .col-lg-20 { width: 100%; } }
+
+@media (min-width: $screen-md-min) {
+	#isopreport {
+		position: absolute;
+		bottom: -15px;
+		left: 1px;
+		width:100%;
+		border-bottom: solid 1px $gray-light;
+		border-right: solid 1px $gray-light;
+	}
+}
+
+
+section.extra-padding {
+	padding: 50px inital;
+}
+
+.reality-check-carousel {
+	margin-top: 20px;
+
+	.carousel-control {
+		width: 50px;
+		color: #fff;
+		text-shadow: none;
+
+		&.right, &.left { background-image: none; }
+		&.right { right: -50px; }
+		&.left { left: -50px; }
+	}
+
+	.carousel-indicators {
+		bottom: -30px;
+		margin-bottom: 0px;
+		li { border: 1px solid #fff; }
+		.active { background: #fff; }
+	}
+}

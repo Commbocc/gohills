@@ -1,0 +1,40 @@
+---
+layout: page
+title: Meetings
+permalink: /meetings/
+---
+
+<ul class="media-list">
+	{% for meeting in site.data.meetings %}
+
+	<li class="meeting media" data-date="{{ meeting.date }}">
+		<div class="media-left">
+			<a href="#">
+				<i class="fa fa-calendar fa-2x"></i>
+			</a>
+		</div>
+		<div class="media-body">
+			<h3 class="media-heading">
+				<a href="#">
+					{{ meeting.date | date: "%B %-d, %Y" }}
+				</a>
+				<small>
+					{{ meeting.title }}
+				</small>
+			</h3>
+			
+			<p>
+				{{ meeting.location }}
+			</p>
+
+			<p class="meeting-rsvp">
+				<a href="#" class="btn btn-info btn-sm">
+					RSVP
+				</a>
+			</p>
+
+		</div>
+	</li>
+
+	{% endfor %}
+</ul>
