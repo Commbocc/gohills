@@ -1,0 +1,11 @@
+- text: "Driving on roads in need of repair costs Florida motorists $2.5B annually in extra vehicle repairs and operations - that's $181.43 per motorist."
+  source: "Ref: American Society of Civil Engineers (ASCE), 2013 Report Card for America's Infrastructure"
+  image: repairs.png
+
+- text: "By the year 2030 the miles people are expected to travel in West Central Florida region will increase by almost 100% and will cause a 300% increase in travel delay."
+  source: "Ref: Florida Department of Transportation, 2006"
+  image: delays.png
+
+- text: "Every dollar invested in transportation results in a return of $4.40 in benefits to Florida's residents and businesses."
+  source: "Ref: Florida Department of Transportation, Macroeconomic Analysis of Florida's Transportation Investments, January 2015"
+  image: return.png

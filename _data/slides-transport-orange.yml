@@ -1,0 +1,16 @@
+- text: "More than HALF of Tampa Bay drivers get stuck in the afternoon rush-hour traffic."
+  source: "Source: 2014 TomTom Traffic Index"
+  image: drivers.png
+
+- text: "Long commutes reduce time for healthy activities such as exercise, shopping for and cooking healthy food, and community and family involvement."
+  source: "Ref: United Way - Study of Financial Hardship, Fall 2014"
+  image: family.png
+
+- text: "Tampa Bay is ranked among the worst in the nation for pedestrian crash fatality rates."
+  source: "Ref: National Highway Traffic Safety Administration, 2009 Ranking of State Pedestrian Fatality Rates"
+  image: pedestrian.png
+
+- text: "Tampa is the 11th worst city in the nation for traffic congestion"
+  source: "Source: 2014 TomTom Traffic Index"
+  image: traffic.png
+
