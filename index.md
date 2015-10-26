@@ -65,9 +65,9 @@ layout: home
 	<h2>Your Voices. Your Choices.</h2>
 </div>
 
-Whether you’ve lived here your entire life or moved here and raised your family, Tampa/Hillsborough County is your community, and we need your voice. Beginning in mid-August 2015, our *GO* Hillsborough team will host another 54 meetings in or near your neighborhood to understand your transportation needs and realities, to explore options that make sense in your daily lives, and to help you weigh in on some hard choices as we move forward.
+Whether you’ve lived here your entire life or moved here and raised your family, Tampa/Hillsborough County is your community, and we need <a href="{{site.baseurl}}/your-voice/">your voice</a>. Beginning in mid-August 2015, our *GO* Hillsborough team will host another 54 meetings in or near your neighborhood to understand your transportation needs and realities, to explore options that make sense in your daily lives, and to help you weigh in on some hard choices as we move forward.
 
-The *GO* Hillsborough team has expertise in all modes of transportation, but no preconceived notions or plans for Hillsborough County. Ultimately, we are – together – creating recommendations that reflect **consensus around a COMMUNITY TRANSPORTATION PLAN** that you can support and help implement – a plan that will make a positive difference in your life.
+The *GO* Hillsborough team has expertise in all modes of transportation, but no preconceived notions or plans for Hillsborough County. Ultimately, we are – together – creating recommendations that reflect **consensus around a [COMMUNITY TRANSPORTATION PLAN]({{site.baseurl}}/community-transportation-plan/)** that you can support and help implement – a plan that will make a positive difference in your life.
 
 <div class="row">
 	<div class="col-md-10 col-md-offset-1">
@@ -77,7 +77,7 @@ The *GO* Hillsborough team has expertise in all modes of transportation, but no 
 	</div>
 </div>
 
-Please join us at any and all of these meetings.
+Please join us at any and all of these <a href="{{site.baseurl}}/meetings/">meetings</a>.
 
-Also, join us online on Facebook, Twitter and our specially designed I-Neighborhood Project App, or call in during one of the four telephone town hall meetings we will host or leave a comment at 813-274-6922. The *GO* Hillsborough team will be frequently updating and checking in on all of our social media, so please check in often.
+Also, join us online on <a href="http://facebook.com/GoHillsborough" target="_blank">Facebook</a>, <a href="http://twitter.com/gohillsborough" target="_blank">Twitter</a> and our specially designed <a href="http://app.gohillsborough.org/">I-Neighborhood Project App</a>, or call in during one of the four telephone town hall meetings we will host or leave a comment at 813-274-6922. The *GO* Hillsborough team will be frequently updating and checking in on all of our social media, so please check in often.
 

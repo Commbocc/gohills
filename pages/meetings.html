@@ -5,19 +5,19 @@ permalink: /meetings/
 ---
 
 <ul class="media-list">
-	{% for meeting in site.data.meetings %}
+	{% for meeting in site.data.meetings reversed %}
 
 	<li class="meeting media" data-date="{{ meeting.date }}">
-		<div class="media-left">
-			<a href="#">
+		<div class="media-left text-primary">
+			<!-- <a href="#"> -->
 				<i class="fa fa-calendar fa-2x"></i>
-			</a>
+			<!-- </a> -->
 		</div>
 		<div class="media-body">
-			<h3 class="media-heading">
-				<a href="#">
+			<h3 class="media-heading text-primary">
+				<!-- <a href="#"> -->
 					{{ meeting.date | date: "%B %-d, %Y" }}
-				</a>
+				<!-- </a> -->
 				<small>
 					{{ meeting.title }}
 				</small>
