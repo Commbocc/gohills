@@ -23,28 +23,24 @@ layout: default
 	<div class="row">
 		
 		<article class="col-sm-7 col-md-8">
-			<div class="panel panel-default">
-				<div class="panel-body">
 
-					{% if page.image %}
-					<p>
-						<img class="img-responsive center-block" src="{{ site.baseurl }}/images/{{ page.image }}" alt="{{ page.title }}">
-					</p>
-					{% elsif page.remote_image %}
-					<p>
-						<img class="img-responsive center-block" src="{{ page.remote_image }}" alt="{{ page.title }}">
-					</p>
-					{% endif %}
+			{% if page.image %}
+			<p>
+				<img class="img-responsive center-block" src="{{ site.baseurl }}/images/{{ page.image }}" alt="{{ page.title }}">
+			</p>
+			{% elsif page.remote_image %}
+			<p>
+				<img class="img-responsive center-block" src="{{ page.remote_image }}" alt="{{ page.title }}">
+			</p>
+			{% endif %}
 
-					{{ content }}
-				</div>
-			</div>
+			{{ content }}
+
 		</article>
 
-		<aside class="col-sm-5 col-md-4">
-			{#% include sidebar.html %}
-
-			{#% include most-recent.html %}
-		</aside>
+		<div class="col-sm-5 col-md-4">
+			{% assign limit = 3 %}
+			{% include most-recent.html %}
+		</div>
 	</div>
 </div>

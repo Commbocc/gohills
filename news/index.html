@@ -11,22 +11,20 @@ title: News & Blog Posts
 			<li class="media">
 				{% if post.image %}
 				<div class="media-left">
-					<a href="{{ post.url | prepend: site.baseurl }}">
+					<a href="{%if post.link%}{{post.link}}{%else%}{{ post.url | prepend: site.baseurl }}{%endif%}" target="{%if post.link%}_blank{%else%}_self{%endif%}">
 						<img class="media-object img-thumbnail" src="{{site.baseurl}}/images/{{ post.image }}" alt="{{ post.title }}">
 					</a>
 				</div>
 				{% elsif post.remote_image %}
 				<div class="media-left">
-					<a href="{{ post.url | prepend: site.baseurl }}">
+					<a href="{%if post.link%}{{post.link}}{%else%}{{ post.url | prepend: site.baseurl }}{%endif%}" target="{%if post.link%}_blank{%else%}_self{%endif%}">
 						<img class="media-object img-thumbnail" src="{{ post.remote_image }}" alt="{{ post.title }}">
 					</a>
 				</div>
 				{% endif %}
 				<div class="media-body">
 					<h3 class="media-heading">
-						<a href="{{ post.url | prepend: site.baseurl }}">
-							{{ post.title }}
-						</a>
+						<a href="{%if post.link%}{{post.link}}{%else%}{{ post.url | prepend: site.baseurl }}{%endif%}" target="{%if post.link%}_blank{%else%}_self{%endif%}">{{ post.title }}</a>
 						<!-- <br> -->
 						<small>
 							{{ post.date | date: "%b %-d, %Y" }}
@@ -34,67 +32,48 @@ title: News & Blog Posts
 					</h3>
 					<blockquote>
 						{{ post.excerpt }}
+						{% if post.source %}
 						<footer>
 							{{ post.source }}
 						</footer>
+						{% endif %}
 					</blockquote>
 				</div>
 			</li>
 			{% endfor %}
 		</ul>
 
-		<!-- pagination -->
-		{% if paginator.total_pages > 1 %}
-		<nav class="text-center">
-			<ul class="pagination">
-				{% if paginator.previous_page %}
-				<li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>
-				{% else %}
-				<li class="disabled"><a href="#"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>
-				{% endif %}
-
-				{% for page in (1..paginator.total_pages) %}
-				{% if page == paginator.page %}
-				<li class="active"><a href="#">{{ page }} <span class="sr-only">(current)</span></a></li>
-				{% elsif page == 1 %}
-				<li><a href="{{ 'news/index.html' | prepend: "/" | replace: '//', '/' }}">{{ page }}</a></li>
-				{% else %}
-				<li><a href="{{ site.paginate_path | prepend: "/" | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
-				{% endif %}
-				{% endfor %}
-
-				{% if paginator.next_page %}
-				<li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li>
-				{% else %}
-				<li class="disabled"><a href="#"><span aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li>
-				{% endif %}
-			</ul>
-		</nav>
-		{% endif %}
-
 	</div>
 	<div class="col-sm-4">
-		<aside class="panel panel-info">
-			<header class="panel-heading">
-				<h4 class="panel-title">Recent News</h4>
-			</header>
-			<div class="list-group">
-
-			{% for post in site.posts limit: 35 %}
-				<a href="{{ post.link }}" target="_blank" class="list-group-item">
-					<h4 class="list-group-item-heading">
-						{{ post.title }}
-						{% if post.source %}
-						<small>{{ post.source }}</small>
-						{% endif %}
-					</h4>
-					<p class="list-group-item-text">
-						{{ post.excerpt }}
-					</p>
-				</a>
-				{% endfor %}
-
-			</div>
-		</aside>
+		{% include most-recent.html %}
 	</div>
 </div>
+
+<!-- pagination -->
+{% if paginator.total_pages > 1 %}
+<nav class="text-center">
+	<ul class="pagination">
+		{% if paginator.previous_page %}
+		<li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>
+		{% else %}
+		<li class="disabled"><a href="#"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>
+		{% endif %}
+
+		{% for page in (1..paginator.total_pages) %}
+		{% if page == paginator.page %}
+		<li class="active"><a href="#">{{ page }} <span class="sr-only">(current)</span></a></li>
+		{% elsif page == 1 %}
+		<li><a href="{{ 'news/index.html' | prepend: "/" | replace: '//', '/' }}">{{ page }}</a></li>
+		{% else %}
+		<li><a href="{{ site.paginate_path | prepend: "/" | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+		{% endif %}
+		{% endfor %}
+
+		{% if paginator.next_page %}
+		<li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li>
+		{% else %}
+		<li class="disabled"><a href="#"><span aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li>
+		{% endif %}
+	</ul>
+</nav>
+{% endif %}

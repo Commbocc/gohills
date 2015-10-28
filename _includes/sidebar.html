@@ -1,25 +1,4 @@
-<aside class="panel panel-info">
-	<header class="panel-heading">
-		<h4 class="panel-title">Recent News</h4>
-	</header>
-	<div class="list-group">
-
-		{% for post in site.posts limit: 3 %}
-		<a href="{{ post.link }}" target="_blank" class="list-group-item">
-			<h4 class="list-group-item-heading">
-				{{ post.title }}
-				{% if post.source %}
-				<small>{{ post.source }}</small>
-				{% endif %}
-			</h4>
-			<p class="list-group-item-text">
-				{{ post.excerpt }}
-			</p>
-		</a>
-		{% endfor %}
-
-	</div>
-</aside>
+{% include most-recent.html %}
 
 <aside class="panel panel-info">
 	<header class="panel-heading">

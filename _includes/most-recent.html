@@ -1,0 +1,31 @@
+<aside class="panel panel-info">
+	<header class="panel-heading">
+		<h4 class="panel-title">Recent News</h4>
+	</header>
+	<div class="list-group">
+
+		{% if limit == nil %}
+		{% assign limit = 5 %}
+		{% endif %}
+
+		{% for post in site.posts limit: limit %}
+		<a href="{%if post.link%}{{post.link}}{%else%}{{ post.url | prepend: site.baseurl }}{%endif%}" target="{%if post.link%}_blank{%else%}_self{%endif%}" class="list-group-item">
+			<h4 class="list-group-item-heading">
+				
+				{{ post.title }}
+
+				<small>{{ post.date | date: "%b %-d, %Y" }}</small>
+
+				{% if post.source %}
+				<small> - {{ post.source }}</small>
+				{% endif %}
+
+			</h4>
+			<p class="list-group-item-text">
+				{{ post.excerpt }}
+			</p>
+		</a>
+		{% endfor %}
+
+	</div>
+</aside>
