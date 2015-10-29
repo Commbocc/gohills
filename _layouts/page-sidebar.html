@@ -13,7 +13,10 @@ layout: default
 			{{ content }}
 		</article>
 
-		<aside class="col-md-4">{% include {{page.sidebar}} %}</aside>
+		<div class="col-md-4">
+			{% assign limit = 5 %}
+			{% include most-recent.html %}
+		</div>
 
 	</div>
 

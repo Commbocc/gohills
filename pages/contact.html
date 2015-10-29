@@ -14,8 +14,59 @@ permalink: /contact-us/
 
 <section class="container extra-padding">
 
-	<form>
-		form
+	<form action="//formspree.io/{{site.email}}" method="post">
+
+		<input type="hidden" name="_next" value="{{site.baseurl}}/thanks/" />
+		<input type="hidden" name="_subject" value="GoHillsborough Contact Form" />
+		<!-- <input type="hidden" name="_cc" value="" /> -->
+		<input type="text" name="_gotcha" style="display:none" />
+
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label for="fname">Full Name</label>
+					<input class="form-control" name="fullname" id="fullname" placeholder="Full Name">
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label for="phone">Phone NUmber</label>
+					<input type="tel" class="form-control" name="phone" id="phone" placeholder="Phone Number">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label for="_replyto">Email</label>
+					<input type="email" class="form-control" name="_replyto" id="_replyto" placeholder="Email">
+				</div>
+			</div>
+			<div class="col-sm-6">
+				<div class="form-group">
+					<label for="region">Region</label>
+					<select name="region" class="form-control" id="region">
+						<option value="New Tampa/Temple Terrace">New Tampa/Temple Terrace</option>
+						<option value="South County/Sun City">South County/Sun City</option>
+						<option value="Brandon/Riverview">Brandon/Riverview</option>
+						<option value="Northeast/Plant City">Northeast/Plant City</option>
+						<option value="South Tampa/West Tampa">South Tampa/West Tampa</option>
+						<option value="Central/East Tampa">Central/East Tampa</option>
+						<option value="Northwest County">Northwest County</option>
+						<option value="Westchase/Town-n-Country/Carrollwood">Westchase/Town-n-Country/Carrollwood</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<p>
+			<label for="comment">Comments *</label>
+			<textarea type="comments" class="form-control" id="email" placeholder="Comments"></textarea>
+		</p>
+		<div class="row">
+			<p class="col-sm-4 col-sm-offset-4">
+				<button type="submit" class="btn btn-outlined btn-default btn-block">Submit</button>
+			</p>
+		</div>
 	</form>
 
 	<div class="small">
@@ -46,9 +97,7 @@ permalink: /contact-us/
 			</h3>
 		</header>
 
-		<form>
-			form
-		</form>
+		{% include form-subscribe.html %}
 
 	</div>
 </section>
