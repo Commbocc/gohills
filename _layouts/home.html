@@ -6,15 +6,8 @@
 <body>
 	{% include nav.html %}
 
-	<div class="jumbotron" id="jumbo-main">
-		<div class="container">
-			<h1 class="text-center">
-				Make Your Voice Heard.
-			</h1>
-			<p class="text-center">
-				<a href="{{site.baseurl}}/understanding-the-issues/" class="btn btn-outlined btn-info btn-lg">Get Involved</a>
-			</p>
-		</div>
+	<div class="container">
+		{% include carousel-home.html %}
 	</div>
 
 	<div class="container" style="margin-top: 50px;">
@@ -31,6 +24,6 @@
 	</div>
 
 	{% include footer.html %}
-	
+
 </body>
 </html>

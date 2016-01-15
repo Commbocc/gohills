@@ -1,0 +1,30 @@
+#carousel-home {
+
+	position: relative;
+
+	.carousel-home-caption {
+		padding: 20px;
+		color: #fff;
+		background: #65675C;
+
+		h3	{ margin: 30px 0; }
+
+		@media (min-width: $screen-sm-min) {
+			position: absolute;
+			top: 0;
+			left: 7px;
+			bottom: 0;
+			right: 451px;
+		}
+
+		@media (min-width: $screen-md-min) {
+			position: absolute;
+			top: 0;
+			left: 158px;
+			bottom: 0;
+			right: 495px;
+		}
+
+	}
+
+}

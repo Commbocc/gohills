@@ -21,3 +21,7 @@ permalink: pretty
 
 paginate: 10
 paginate_path: "/news/page:num"
+
+gems:
+ - jekyll-coffeescript
+ - jekyll-paginate
