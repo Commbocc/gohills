@@ -9,8 +9,8 @@ description: > # this means to ignore newlines until "email:"
 
 email: info@gohillsborough.org
 
-baseurl: "/gohills"
-url: "http://yourdomain.com"
+baseurl: "/"
+url: "http://go.hillsboroughcdms.org"
 
 # twitter_username: jekyllrb
 # github_username:  jekyll
