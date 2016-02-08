@@ -17,12 +17,11 @@
 
 	{% include analytics.html %}
 
-	{% if true %}
+	{% if site.github.url == 'http://go.hillsboroughcdms.org' %}
 	<script type="text/javascript">
 	var host = window.location.hostname;
-	console.log(host);
-	if (host != 'hillsboroughcdms.org') {
-		// window.location.replace('http://go.hillsboroughcdms.org/');
+	if (host != 'go.hillsboroughcdms.org') {
+		window.location.replace('http://go.hillsboroughcdms.org/');
 	}
 	</script>
 	{% endif %}
