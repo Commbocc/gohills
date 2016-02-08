@@ -17,16 +17,9 @@
 
 	{% include analytics.html %}
 
-	<!-- <link rel="stylesheet" href="{{ site.baseurl }}/css/wow-animate.min.css"> -->
-
-	<script src="{{ site.baseurl }}/js/wow.min.js"></script>
-	<script>
-	// new WOW().init();
-	</script>
-
 	<meta name="temp" content="{{ site.github.url }}">
 
-	{% if false %}
+	{% if site.github.url == 'http://go.hillsboroughcdms.org' %}
 	<script type="text/javascript">
 	var host = window.location.hostname;
 	if (host != 'hillsboroughcdms.org') {

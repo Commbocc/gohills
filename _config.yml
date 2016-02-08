@@ -12,6 +12,8 @@ email: info@gohillsborough.org
 baseurl: ""
 url: "http://go.hillsboroughcdms.org"
 
+google_analytics: UA-63036279-5
+
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
