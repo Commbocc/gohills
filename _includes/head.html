@@ -21,7 +21,18 @@
 
 	<script src="{{ site.baseurl }}/js/wow.min.js"></script>
 	<script>
-		// new WOW().init();
+	// new WOW().init();
 	</script>
+
+	<!-- {{ site.github.url }} -->
+
+	{% if false %}
+	<script type="text/javascript">
+	var host = window.location.hostname;
+	if (host != 'hillsboroughcdms.org') {
+		window.location.replace('http://go.hillsboroughcdms.org/');
+	}
+	</script>
+	{% endif %}
 
 </head>
